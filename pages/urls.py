@@ -7,5 +7,6 @@ urlpatterns = [
     path("profile/<int:id>", ProfileView.as_view(), name="profile"),
     path("browse_profile", BrowseProfilesView.as_view(), name="browse_profiles"),
     path('inbox/<int:id>', inbox_view),
-    path('friends_to_contact/<int:id>', friends_to_contact_view)
+    path('friends_to_contact/<int:id>', friends_to_contact_view),
+    path('ask_question', ask_question_view)
 ]
