@@ -86,9 +86,9 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
         "ENGINE": "django.db.backends.postgresql",
-        "USER": "postgres",
-        "PASS": "admin",
-        "NAME": "rossedwards",
+        "USER": "",
+        "PASS": "",
+        "NAME": "",
         #"OPTIONS": {
         #    "service": "my_service",
         #    "passfile": ".my_pgpass",

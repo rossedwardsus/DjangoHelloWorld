@@ -8,5 +8,6 @@ urlpatterns = [
     path("browse_profile", BrowseProfilesView.as_view(), name="browse_profiles"),
     path('inbox/<int:id>', inbox_view),
     path('friends_to_contact/<int:id>', friends_to_contact_view),
-    path('ask_question', ask_question_view)
+    path('ask_question', ask_question_view),
+    path('browse_questions', browse_questions_view)
 ]

@@ -6,4 +6,12 @@
   stripe
   <br/>
   dwolla
+  <br/>
+  <br/>
+  {% for question in questions %}
+      title{{ question.question_title }}
+      <br/>
+      datetime{{ question.question_added_datetime }}
+      <br/>
+  {% endfor %}
 {% endblock content %}

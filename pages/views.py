@@ -1,6 +1,8 @@
 from datetime import datetime
 from django.shortcuts import render
 from .forms import QuestionForm
+from django.shortcuts import redirect
+
 
 # Create your views here.
 
@@ -57,14 +59,29 @@ def ask_question_view(request: HttpRequest):
         #question.save() 
         #Member.objects.all().values() 
 
+        print(str(datetime.now()))
+
         #context['form']= form
 
         return render(request, "pages/ask_question.html", {"form": form})
     elif request.method == "POST":
 
         q = QuestionForm(request.POST)
-        q.save()
+        #q.save()
 
-        return HttpResponse("post")
+        print(str(q))
+
+        #return HttpResponse("post")
+        return render("/ask_question", {"form": q})
+    
+def browse_questions_view(request: HttpRequest):
+
+    questions = Question.objects.all().values() 
+
+    return render(request, "pages/browse_questions.html", {"questions": questions})
+
+
+
+    
 
 

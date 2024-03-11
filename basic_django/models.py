@@ -1,3 +1,4 @@
+from datetime import datetime
 import uuid
 from django.db import models
 
@@ -15,10 +16,11 @@ class Question(models.Model):
     #question_title = models.CharField(max_length=30)
     question_title = models.CharField(max_length=30)
     question_text = models.TextField(max_length=30)
-    question_added_datetime = models.DateField(max_length=30)
+    question_added_datetime = models.DateTimeField(default=datetime.now())
 
     class Meta:
         db_table = "questions"
+        ordering=["-question_added_datetime"]
 
     
     def __str__(self):

@@ -5,10 +5,13 @@
   <br/>
   ask question
   <br/>
-  <form method="post" action="">
+  <form method="post" action="" novalidate>
     {% csrf_token %}
     <br/>
     {{ form }}
+    <br/>
+    here{{ form.errors.question_title}}
+    <br/>
     <input type="submit" value="Submit Form"/>
   <br/>
   dwolla
