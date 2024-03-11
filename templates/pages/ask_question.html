@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>inbox!{{ id }}</h1>
+  <br/>
+  ask question
+  <br/>
+  <form method="post" action="">
+    {% csrf_token %}
+    <br/>
+    {{ form }}
+    <input type="submit" value="Submit Form"/>
+  <br/>
+  dwolla
+{% endblock content %}
